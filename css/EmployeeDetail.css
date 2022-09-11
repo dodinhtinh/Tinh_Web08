@@ -1,0 +1,89 @@
+@import url(./base/checkbox.css);
+@font-face {
+    font-family: misa-font ;
+    src: url(../assets/font/GoogleSans-Regular.otf);
+}
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: misa-font;
+}
+.modal
+{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+    z-index: 98;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: all 0.2s ease;
+    padding:64px 120px;
+}
+.modal .container
+{
+    width: 900px;
+    height: 625px;
+    background-color: #ffffff;
+    z-index: 200;
+    border: 1px solid rgb(224, 224, 224);
+    display: flex;
+    flex-flow: row nowrap;
+}
+.modal .container .header-detail-employee
+{
+    height: 73px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.modal .container .header-detail-employee .header-popup-title
+{
+    width: 822px;
+    height: 73px;
+    padding: 20px 12px 20px 32px;
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title
+{
+    width: calc(822px - 12px - 32px);
+    height: calc(73px - 20px - 20px);
+    display: flex;
+    flex-direction: row;
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-name
+{
+    font-size: 24px;
+    width: 227px;
+    background-color: #ffffff;
+    height: calc(73px - 20px - 20px);
+    font-weight: 800;
+    margin-right: 20px;
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component
+{
+    width: 200px;
+    height: calc(73px - 20px - 20px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component .label-checkbox
+{
+    width: 33px;
+    height: calc(73px - 20px - 20px);
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.modal .container .header-detail-employee .header-popup-close
+{
+    width: calc(900px - 822px);
+    height: 73px;
+}

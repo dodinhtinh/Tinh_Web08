@@ -1,0 +1,33 @@
+@keyframes rotate {
+    0%{
+        transform: rotateZ(-90deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component .label-checkbox .checkbox-client,.checkbox-show-client,.checkbox-supplier,.checkbox-show-supplier
+{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component .label-checkbox .checkbox-show-client,.checkbox-show-supplier
+{
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -1225px -363px;
+    border: 1px solid rgb(80, 184, 60);
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component .label-checkbox .checkbox-show-client,.checkbox-show-supplier
+{
+    display: none;
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component .label-checkbox .checkbox-client:checked,.checkbox-supplier:checked
+{
+    display: none;
+}
+.modal .container .header-detail-employee .header-popup-title .popup-title .title-component .label-checkbox .checkbox-client:checked + .checkbox-show-client,.checkbox-supplier:checked + .checkbox-show-supplier
+{
+    display: block;
+    animation-name: rotate;
+    animation-duration: 1s;
+}

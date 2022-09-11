@@ -1,0 +1,559 @@
+@import url(./base/button.css);
+@import url(./base/input.css);
+@import url(./base/combobox.css);
+@font-face {
+    font-family: misa-font ;
+    src: url(../assets/font/GoogleSans-Regular.otf);
+}
+* {
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: misa-font;
+}
+
+body {
+    margin: 0px;
+}
+
+.layout-main {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.layout-main .menu-container {
+    background-color: #041434;
+    width: 180px;
+    height: 100vh;
+}
+
+.layout-main .menu-container .menu-container-logo {
+    display: flex;
+    height: 48px;
+    align-items: center;
+    background-color: #38393d;
+    padding: 24px;
+}
+
+.layout-main .menu-container .menu-container-logo .logo-container-option {
+    background: url(../assets/img/Sprites.64af8f61.svg) no-repeat -428px -92px;
+    width: 24px;
+    height: 24px;
+    transform: translate(25%, 25%);
+    margin-right: 10px;
+}
+
+.layout-main .menu-container .menu-container-logo .logo-container-accounting {
+    height: 36px;
+    width: 104px;
+}
+
+.layout-main .menu-container .menu-container-logo .logo-container-accounting img {
+    height: 36px;
+    width: 104px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4D646F;
+    border-radius: 10px;
+    height: 10px;
+}
+
+.layout-main .menu-container .menu-container-item {
+    height: calc(100% - 48px);
+    padding-top: 20px;
+    background-image: url(https://actappg1.misacdn.net/img/bg_trung_thu.00497630.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.layout-main .menu-container .menu-container-item::-webkit-scrollbar:hover {
+    background-color: #9E9E9E;
+}
+
+.layout-main .menu-container .menu-container-item .item-content {
+    width: 170px;
+    height: 44px;
+    margin-bottom: 4px;
+    padding-left: 10px;
+}
+
+.layout-main .menu-container .menu-container-item .item-content:hover {
+    background-color: rgba(110, 110, 110, 0.5);
+}
+
+
+/* .layout-main .menu-container .menu-container-item .item-content::before
+{
+    content: "";
+    width: 10px;
+    height:44px ;
+    background-color: #067933;
+    display: block;
+} */
+.layout-main .menu-container .menu-container-item .item-content .item {
+    width: 160px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.layout-main .menu-container .menu-container-item .item-content .item .item-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    background: url(../assets/img/Sprites.64af8f61.svg) no-repeat;
+    transform: translate(0%, 50%);
+}
+
+
+.layout-main .menu-container .menu-container-item .item-content .item .item-name {
+    width: 100px;
+    height: 44px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.layout-main .menu-container .menu-container-item .ultimate {
+
+    width: 24px;
+    height: 16px;
+    border: 1px solid black;
+    margin: 0px auto;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    display: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    font-size: large;
+    background-color: #3395FF;
+}
+
+.layout-main .menu-container .menu-container-item .ultimate .ultimate-icon {
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -612px -413px;
+    width: 8px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    fill: #ffffff;
+    margin: auto auto;
+    transform: rotateZ(180deg);
+    cursor: pointer;
+}
+
+.layout-main .content-container {
+    width: calc(100% - 70px);
+    height: 100vh;
+    background-color: #eceef1;
+    color: #041434;
+}
+
+.layout-main .content-container .navigation-bar {
+    height: 48px;
+    background-color: #ffffff;
+    justify-content: space-between;
+}
+
+.layout-main .content-container .navigation-bar,
+.header-left,
+.header-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.layout-main .content-container .navigation-bar .header-left {
+    width: 500px;
+    align-items: center;
+}
+
+.layout-main .content-container .navigation-bar .header-left .header-icon-bar {
+    width: 16px;
+    height: 16px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -847px -35px;
+    margin: 0px 10px;
+}
+
+.layout-main .content-container .navigation-bar .header-left .header-name-left {
+    font-weight: 800;
+    font-size: 14px;
+    width: 420px;
+    text-align: center;
+}
+
+.layout-main .content-container .navigation-bar .header-left .header-icon-down {
+    width: 16px;
+    height: 16px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -178px -364px;
+    margin: 0px 4px;
+}
+
+.layout-main .content-container .navigation-bar .header-right {
+    width: 300px;
+}
+
+.layout-main .content-container .navigation-bar .header-right .header-right-notify {
+    width: 48px;
+    margin: 0px 12px;
+
+}
+
+.layout-main .content-container .navigation-bar .header-right .header-right-notify .notify {
+    width: 24px;
+    height: 24px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    ;
+    margin: 0px auto;
+    transform: translate(0%, 50%);
+}
+
+.layout-main .content-container .navigation-bar .header-right .header-right-account {
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+}
+
+.layout-main .content-container .navigation-bar .header-right .header-right-account .header-icon-avatar{
+    width: 24px;
+    height: 24px;
+    border: 1px solid black;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    transform: translateY(50%);
+    margin: 0px 10px;
+}
+.layout-main .content-container .navigation-bar .header-right .header-right-account .header-icon-avatar .avatar
+{
+    width: 16px;
+    height: 16px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -165px -1664px;
+    ;
+    margin: 0px auto;
+}
+.layout-main .content-container .navigation-bar .header-right .header-right-account .header-name-right
+{
+    font-weight: 1000;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.layout-main .content-container .navigation-bar .header-right .header-right-account .header-icon-down
+{
+    width: 16px;
+    height: 16px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -178px -364px;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    margin: auto 10px;  
+}
+.layout-main .content-container .layout-content
+{
+    height: calc(100vh - 48px);
+    background-color: #ffffff;
+    margin: 0px 24px;
+}
+.layout-main .content-container .layout-content .header-table-data
+{
+    height: 56px;
+    background-color: #eceef1 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.layout-main .content-container .layout-content .header-table-data
+.header-table-title
+{
+    font-weight: 1000;
+    font-size: 24px;
+}
+.layout-main .content-container .layout-content .header-table-data
+.header-table-title,.header-table-button
+{
+    width: 130px;
+    display: flex;
+    align-items: center;
+}
+.layout-main .content-container .layout-content .get-data
+{
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:end; 
+}
+.layout-main .content-container .layout-content .get-data .search-data
+{
+    width: 280px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:end;
+    outline:2px #2ca01c auto;
+}
+.layout-main .content-container .layout-content .get-data .btn-search
+{
+    width: 28px;
+    height: 24px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -425px -33px;
+    border: none;
+}
+
+
+.layout-main .content-container .layout-content .get-data .load-all-data
+{
+    width: 28px;
+    height: 28px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -493px -31px;;
+    margin: 0px 12px;
+}
+.layout-main .content-container .layout-content .content-data
+{
+    height: calc(100vh - 164px);
+    margin: 0px 24px;
+    padding-top: 16px;
+}
+.layout-main .content-container .layout-content .content-data .table
+{
+   width: 100%;
+   border-spacing: 0px;
+}
+
+.layout-main .content-container .layout-content .content-data .table
+thead
+{
+    background-color: #eceef1;
+}
+.layout-main .content-container .layout-content .content-data .table
+th,td
+{
+    text-align: center;
+    border: 1px solid #041434;
+    border-top: none;
+    border-left: none;
+}
+.layout-main .content-container .layout-content .content-data .table
+th:last-child
+{
+    border-right: none;
+}
+.layout-main .content-container .layout-content .content-data .table
+td:last-child
+{
+    border-right: none;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot
+{
+    width: 100%;
+    height: 36px;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature,.edit,.caret-up
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature .edit,.caret-up
+{
+    width: 36px;
+    height: 48px;
+    margin: 0px 4px;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature .caret-up .caret-up-icon
+{
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -900px -365px;
+    width: 8px;
+    height: 8px;
+}
+
+.layout-main .content-container .layout-content .content-data .table tbody .feature .list-feature
+{
+    height: 90px;
+    width: 120px ;
+    position: absolute;
+    background-color: #ffffff;
+    top: 28px;
+    right: 12px;
+    z-index: 99;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature .list-feature .nav
+{
+    list-style-type: none;
+    height: 90px;
+    border: 1px solid #9E9E9E;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature .list-feature .nav .nav-item
+{
+    border: 1px solid #041434;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature .list-feature,#show-feature
+{
+    display: none;
+}
+.layout-main .content-container .layout-content .content-data .table tbody .feature #show-feature:checked ~ .list-feature
+{
+    display: block;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .pages
+{
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .sum-pages
+{
+    height: 36px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate
+{
+    height: 36px;
+    width: 338px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate #show-number-records
+{
+    display: none; 
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate #show-number-records:checked ~ .list-records
+{
+    display: block;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .number-records
+{
+    width: 200px;
+    height:28px ;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    outline: 1px #9E9E9E auto;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .number-records .cbb-input-records
+{
+    height:28px ;
+    width: 150px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .number-records .cbb-push-up
+{
+    width:40px ;
+    height: 28px;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .number-records .cbb-push-up:focus ~ .page-records
+{
+   display: block;
+}
+
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .number-records .cbb-push-up .push-up
+{
+    width: 8px;
+    height: 8px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -900px -365px;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .number-records .cbb-push-up:hover
+{
+    background-color:#9E9E9E ;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .page-records
+{
+    width:134px ;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .page-records .page
+{
+    width: 16px;
+    height: 28px;
+    border: 1px solid #041434;
+    text-align: center;
+    padding-top: 5px ;
+    cursor: pointer;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .page-records .page:first-child
+{
+    width: 40px;
+    border: none;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .page-records .page:last-child
+{
+    width: 30px;
+    border: none;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .list-records
+{
+    width: 200px;
+    height: 140px;
+    position: absolute;
+    top:100%;
+    background-color: #ffffff;
+    display: none;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .list-records .nav
+{
+    margin-top: 0px;
+    margin-left: -40px;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .list-records .nav-item
+{
+    list-style-type: none;
+    text-align: start;
+    margin-left: 0px;
+    width: 100%;
+    height: 28px;
+    border: 1px solid #041434;
+    padding-top: 4px;
+}
+.layout-main .content-container .layout-content .content-data .table tfoot .paginate .list-records .nav-item:hover
+{
+    color: #ffffff;
+    background-color:#2ca01c;
+    cursor: pointer;
+}
+
+
